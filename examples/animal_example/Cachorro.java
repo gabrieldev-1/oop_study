@@ -1,4 +1,4 @@
-package animal_example;
+package examples.animal_example;
 
 public class Cachorro extends Animal {
     private String raca;

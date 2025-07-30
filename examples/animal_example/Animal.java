@@ -1,4 +1,4 @@
-package animal_example;
+package examples.animal_example;
 
 public class Animal {
     private String nome;

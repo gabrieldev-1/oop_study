@@ -1,3 +1,5 @@
+package examples.car_example;
+
 public class CarroEncapsulado {
     // Atributos privados (encapsulados)
     private String modelo;
