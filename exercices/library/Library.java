@@ -1,25 +1,19 @@
 package library;
+import java.util.ArrayList;
 
 public class Library {
     public static void main(String[] args) {
-        Book livro01 = new Book("Crime e Castigo", 500, true);
-        Book livro02 = new Book("Meditacoes", 120, true);
-        Book livro03 = new Book("Gerra e Paz", 900, true);
-        Book livro04 = new Book("Crepusculo dos Idolos", 200, true);
-        Book livro05 = new Book("O Idiota", 700, true);
-        Book livro06 = new Book("Sobre a Breviedade da Vida", 150, true);
+        ArrayList<Book> books = new ArrayList<>();
+        books.add(new Book("Crime e Castigo", 500, true));
+        books.add(new Book("Meditacoes", 120, true));
+        books.add(new Book("Guerra e Paz", 900, true));
+        books.add(new Book("Crepusculo dos Idolos", 200, true));
+        books.add(new Book("O Idiota", 600, true));
+        books.add(new Book("Sobre a Breviedade da Vida", 150, true));
 
-        Member membro01 = new Member("Gabriel dos Santos", 0001);
-
-        membro01.lendBook(livro01);
-        membro01.lendBook(livro02);
-
-        membro01.showInfos();
-
-        membro01.returnBook(livro01);
-
-        membro01.showInfos();
-  
-    
+        ArrayList<Member> members = new ArrayList<>();
+        members.add(new Member("Gabriel dos Santos",0001));
+        members.add(new Member("Guilherme Montovani", 0002));
+        members.add(new Member("Maria Eduarda Lopes", 0003));
     }
 }
