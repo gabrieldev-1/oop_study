@@ -13,11 +13,10 @@ public class Library {
 
         membro01.lendBook(livro01);
         membro01.lendBook(livro02);
-        membro01.lendBook(livro03);
-        membro01.lendBook(livro04);
-        membro01.lendBook(livro05);
-        membro01.lendBook(livro06);
 
+        membro01.showInfos();
+
+        membro01.returnBook(livro01);
 
         membro01.showInfos();
   

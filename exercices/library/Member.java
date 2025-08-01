@@ -31,7 +31,7 @@ public class Member {
                     book.setStatus(false);
                     System.out.println("Livro " + book.getName() + " emprestado com sucesso");
                     return;
-
+ 
                 }
             }
             System.out.println("Voce atingiu o limite maximo de livros emprestados por membro. Devolva ao menos um para emprestar outro.");
@@ -40,6 +40,18 @@ public class Member {
             System.out.println("O livro esta indisponivel");
 
         }
+    }
+
+    public void returnBook(Book book) {
+        for(int i = 0; i < borrowedBooks.length; i++) {
+            if(borrowedBooks[i].getName() == book.getName()) {
+                borrowedBooks[i] = null;
+                book.setStatus(true);
+                System.out.println("Livro de volvido com sucesso!");
+                return;
+            }
+        }
+        System.out.println("O membro " + this.getName() + " nao emprestou esse livro.");
     }
 
     public void showInfos() {
