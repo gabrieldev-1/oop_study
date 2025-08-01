@@ -23,6 +23,25 @@ public class Member {
         return borrowedBooks;
     }
 
+    public void lendBook(Book book) {
+        if (book.getStatus().equals("Disponivel")) {
+            for(int i = 0; i < borrowedBooks.length; i++) {
+                if(borrowedBooks[i] == null) {
+                    borrowedBooks[i] = book;
+                    book.setStatus(false);
+                    System.out.println("Livro " + book.getName() + " emprestado com sucesso");
+                    return;
+
+                }
+            }
+            System.out.println("Voce atingiu o limite maximo de livros emprestados por membro. Devolva ao menos um para emprestar outro.");
+
+        } else {
+            System.out.println("O livro esta indisponivel");
+
+        }
+    }
+
     public void showInfos() {
         System.out.println("------ Informacoes do membro ------");
         System.out.println("Nome: " + this.getName());

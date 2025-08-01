@@ -24,6 +24,10 @@ public class Book {
         return status ? "Disponivel" : "Indisponivel";
     }
 
+    public void setStatus(boolean newStatus) {
+        this.status = newStatus;
+    }
+
     public void showInfos() {
         System.out.println("------ Informacoes do livro ------");
         System.out.println("Nome: " + this.getName());
